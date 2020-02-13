@@ -1,0 +1,22 @@
+#cloud-config
+hostname: "worker1"
+ssh_authorized_keys:
+  - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC/HiOfl7wR4h6jZN40PrWRhBqB318lywm3hCG1P9d8Qrbz7+kRLJhQYw5spC/Jueaj7kKgNURdaAzvgbOnmHr+E+6gXvN2kwHYnTreiKBTKnEWYrR0tAOxeqcQQTpE2kJNs/Qz4aHet7Q9rF/9tBTM9lPRyLRrVStpiyu/+vhjJxRUCv1/u1y7hNMsVb09GfGZb1AjNcinRtzoPWrGvuQOS/c5mldqN3Rm49PAT9fbeala7UieLPszZcn5WcbNb5Hy5f5CY74i3Iw7E6IWsUr0wEtYBSMHwgzwVSrnnFa8h/WbvwxyozqLjFSoyBakBtve+BJwG0bzp0t4e6nH39VwQ0TKHa/acq6dafDSWo8QtKO12oo9OOxFjHvt36IP1IW5kiy9w0UI7StZ1iJVuXv2NLHnWkvhkGoqfQ2fmsdjSSw25z/9vyX/TVB289Jt+ctMmbZZKBmZDGH+2wSPgOnjK4FO+wrJ+1+stH8JWpb40MW1OMD/CwEOjlOT/0ZLGal9wyey2R3KIGIQDc7dTawlxXXAEd2Sapw8DoBZM90kNbLcpMtu8lrzc67RgmM1y/sx+pwjbjLS1bSkviBkmOZ8ptLhYeQGfzNb8+3Bn5Tt3ilrcpnteJdvv7un201PXmQN0enXw8FpsF1MDJiON12GXoGhA49msXy8BUVhywSA7Q== sascha@liberty-sec.de
+
+rancher:
+  services_include:
+    kernel-extras: true
+  console: debian
+  resize_device: /dev/sda
+  # network:
+  #   interfaces:
+  #     eth1:
+  #       dhcp: true
+  #     wlan0:
+  #       wifi_network: network1
+  #   wifi_networks:
+  #     network1:
+  #       ssid: "FRITZ!Box"
+  #       psk: "ZooAusflug2015"
+  #       scan_ssid: 1
+
